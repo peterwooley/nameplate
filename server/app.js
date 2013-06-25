@@ -14,22 +14,16 @@ serialPort.open(function () {
   });  
 });
 
+var ptoOn = false;
+
 app.get('/', function(req, res){
-  res.send('<button type="button">PTO!</button><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><script>$("button").click(function(){alert("clicked!"); $.post("/pto", {stuff: { "foo" : "bar"} }, function(){}, "json");});</script>');
+  res.send('<button type="button">PTO!</button><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script><script>$("button").click(function(){$.post("/pto", {stuff: { "foo" : "bar"} }, function(){}, "json");});</script>');
 });
 
 app.post('/pto', function(req,res){
-  serialPort.write("pto", function(err, results) { console.log(arguments)})
+  serialPort.write(ptoOn?"nopto":"pto", function(err, results) { console.log(arguments)})
+  ptoOn = !ptoOn;
 });
 
 app.listen(3000);
 console.log('Listening on port 3000');
-
-
-var cmd = 2;
-setInterval(function() {
-  cmd++;
-  if(cmd > 4) cmd = 2;
-  serialPort.write(cmd+"\r", function(err, results) {
-  });  
-}, 3000);
