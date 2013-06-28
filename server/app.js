@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var serialport = require('serialport');
 var SerialPort = serialport.SerialPort;
-var serialPort = new SerialPort("/dev/tty.usbmodemfd111", {
+var serialPort = new SerialPort("/dev/tty.usbmodem1411", {
   baudrate: 9600,
   parser: serialport.parsers.readline("\n")
 });
@@ -23,6 +23,8 @@ app.get('/', function(req, res){
 app.post('/pto', function(req,res){
   serialPort.write(ptoOn?"nopto":"pto", function(err, results) { console.log(arguments)})
   ptoOn = !ptoOn;
+  res.end("Done!");
+  console.log("CLICK");
 });
 
 app.listen(3000);
