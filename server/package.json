@@ -4,7 +4,9 @@
   "description": "Server for LED Nameplate",
   "main": "app.js",
   "dependencies": {
-    "serialport": "~1.1.1"
+    "serialport": "~1.1.1",
+    "express": "~3.2.6",
+    "config": "~0.4.27"
   },
   "devDependencies": {},
   "scripts": {
