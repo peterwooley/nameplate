@@ -45,8 +45,9 @@ byte pattern[bits_l][numChip];
 String cmd = "";
 
 char NAME [] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 3, 3, 3, 0, 0, 0, 0, 3, 0, 0, 0, 3, 3, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 3, 3, 3, 0, 0, 0, 3, 0, 0, 0, 3, 3, 3, 3, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 3, 3, 0, 0, 0, 3, 3, 0, 0, 3, 0, 0, 0, 0, 3, 3, 3, 3, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 3, 0, 3, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 3, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 3, 3, 0, 0, 0, 3, 3, 0, 0, 3, 3, 3, 3, 0, 3, 3, 3, 3, 0, 0, 0, 3, 0, 0, };
-char PTO [] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0, 0, 0, 0, 0, 4, 4, 0, 0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 4, 4, 0, 4, 4, 4, 0, 4, 4, 4, 0, 4, 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0, 4, 4, 0, 4, 4, 4, 0, 4, 4, 4, 0, 4, 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0, 0, 4, 4, 4, 4, 0, 4, 4, 4, 0, 4, 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 0, 4, 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 0, 4, 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 0, 0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, };
-
+char PTO [] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0,/*Should be on*/ 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2,/*RED ONE!*/ 1, 2, 2, 2, 1, 2, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2,/*Transparent*/ 1, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+//char TEST [] = {1,1,1,1};
+//char FILL[] = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
 void setup()
 {
   Serial.begin(9600);
@@ -73,15 +74,19 @@ void setup()
   
   
   Clear(); // Clear the display
+  //delay(500);
   drawImage(NAME, 32, 16, 0, 0);
-  //clearPixel(0,0);
+  drawImage(PTO, 32, 16, 0, 0);
+  //drawImage(FILL, 32,16, 0, 0);
+  //drawImage(TEST, 2,2, 12,7);
+  //clearPixel(1,1);
   //Serial.println("Setup");
 }
 
 void loop ()
 {
   //Clear();
-  
+  Serial.println(Serial.available());
   //char IMG [] = {0,1,2,3,4}; // Off, Transparent, Green, Red, Orange
   //drawImage(DRAWING, 32, 16, 0, 0);
   cmd = readline();
@@ -89,8 +94,9 @@ void loop ()
   if(cmd.length() > 0) Serial.println(cmd);  
   if(cmd=="pto") {
     //Serial.println("Got cmd: " + cmd);
-    //Clear();
-    //char IMG[] = {stringToNumber(cmd)};
+    Clear();
+
+    drawImage(NAME, 32, 16, 0, 0);
     drawImage(PTO, 32, 16, 0, 0);
     
   } else if(cmd=="nopto") {
@@ -101,24 +107,35 @@ void loop ()
   delay(100);
 }
 
-void drawImage(const char * image, int height, int width, int x, int y) {
+void drawImage(const char * image, int width, int height, int xOffset, int yOffset) {
   int pixel;
-  for(int a=0; a<width; a++) {
-   for(int b=0; b<height; b++) {
-     pixel = image[a*height+b];
+  int x;
+  int y;
+  for(int h=0; h<height; h++) {
+   for(int w=0; w<width; w++) {
+     pixel = image[h*width+w];
+     x = xOffset+w;
+     y = yOffset+h;
+     //char msg[40];
+     //sprintf(msg,"Plotted %i,%i as %i",x,y,pixel);
+     //Serial.println(msg);
      switch(pixel) {
-       //case 0:
-         //Plot(x+b, y+a, 0);
-         //break;
+       case 0:
+         break;
+       case 1:
+         clearPixel(x, y);
+         break;
        case 2:
-         Plot(x+b, y+a, 0);
+         clearPixel(x, y);
+         Plot(x, y, 0);
          break;
        case 3:
-         Plot(x+b, y+a, 1);
+         clearPixel(x, y);
+         Plot(x, y, 1);
          break;
        case 4:
-         Plot(x+b, y+a, 0);
-         Plot(x+b, y+a, 1);
+         Plot(x, y, 0);
+         Plot(x, y, 1);
      }
    }
  }
@@ -127,8 +144,10 @@ void drawImage(const char * image, int height, int width, int x, int y) {
 
 String readline() {
   String readString = "";
+  Serial.println(Serial.available());
   while (Serial.available()) {
-    delay(3);  //delay to allow buffer to fill 
+    delay(3);  //delay to allow buffer to fill
+    Serial.println(Serial.available());
     if (Serial.available() >0) {
       char c = Serial.read();  //gets one byte from serial buffer
       readString += c; //makes the string readString
@@ -150,24 +169,62 @@ int stringToNumber(String thisString) {
   return value;
 }
 
-void clearPixel(int x, int y)
+void clearPixel(int X, int Y)
 {
-  char i;
+ if(X<0 || X>31 || Y<0 || Y>15)  
+    return;      
 
-  chipselect(1);
-  writebits(HT1632_ID_WR, 2);  // send ID: WRITE to RAM
-  writebits(0, 6); // Send address
-  for (i=0; i<32/2; i++) // Clear entire display
-    writebits(0, 7); // send 8 bits of data
-  for (i=0; i<2/2; i++) // Clear entire display
-    writebits(1, 7); // send 8 bits of data
-  chipselect(0);
+  // variables declaration
+  int x = 0;
+  int y = 0;
+  int nChip = 0;
+   
+  
 
-//  for(int i=0; i<bits_l; i++) {
-//    for(int j=0; j<numChip; j++) {
-//      pattern[i][j] = 0;
-//    }
-//  }
+  // transform the X/Y coordinates to the number of the microchip
+  // that controls the region (1,2,3 or 4) the LED you want to
+  // light up
+  nChip = 1 + X/16 + (Y>7?2:0);
+  chipselect(nChip); // call the function chipselect to send the
+				 // information to the matrix
+  // after the selection of the chip we need just the coordinate
+  // for 1 of them, so we need to change the coordinate system
+  x = X%16; // columns
+  y = Y%8;  // rows
+  
+  //Serial.println("Changing LED:");
+  //Serial.println(x);
+  //Serial.println(y);
+  
+
+  // from X/Y to address
+  int greenAddress = ((x*2+y/4));
+  int redAddress = ((x*2+y/4)) + 32;
+  //Serial.println(greenAddress);
+  //Serial.println(redAddress);
+
+  // 2014-09-08: Converting from Y to pattern appears to cause the over/under clearing
+  // You still have memory of how this works.
+
+  // from Y to pattern
+  //Serial.println("Updating Pattern:");
+  //Serial.println(pattern[greenAddress][nChip]);
+  int clearPattern = 1<<(3-y%4)^15;
+  //Serial.println(clearPattern);
+  //Serial.println(pattern[greenAddress][nChip] & clearPattern);
+  pattern[greenAddress][nChip] = pattern[greenAddress][nChip] & clearPattern;
+  pattern[redAddress][nChip] = pattern[redAddress][nChip] & clearPattern;  
+  
+  
+  writebits(HT1632_ID_WR, 2);  		   // send ID: WRITE to RAM
+  writebits(greenAddress, 6);       		   // Send address
+  writebits(pattern[greenAddress][nChip], 3);   // send 4 bits of data
+  chipselect(nChip);
+  writebits(HT1632_ID_WR, 2);  		   // send ID: WRITE to RAM
+  writebits(redAddress, 6);       		   // Send address
+  writebits(pattern[redAddress][nChip], 3);   // send 4 bits of data
+//  Serial.println(pattern[address][nChip]);
+  
 }
 
 //**************************************************************************************************
@@ -314,11 +371,15 @@ void Plot (int X, int Y, int color)
   x = X%16; // columns
   y = Y%8;  // rows
   
+  //Serial.println("Drawing LED:");
+  //Serial.println(x);
+  //Serial.println(y);
   
 
   // from X/Y to address
   address = ((x*2+y/4)) + color*32;
-  Serial.println(address);
+  //Serial.println(address);
+  //Serial.println(((1<<(3-y%4))));
 
   // from Y to pattern
   pattern[address][nChip] = pattern[address][nChip] | ((1<<(3-y%4)));      
